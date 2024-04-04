@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addTaskActivity"
+    android:id="@+id/scrollView"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#C7EDEC"
+            android:text="Lưu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/layoutAdd"
+            app:layout_constraintTop_toBottomOf="@id/buttonSave"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="15dp"
+            >
+            <TextView
+                android:id="@+id/textViewTieuDe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tiêu đề"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_weight="0.25"/>
+
+            <EditText
+                android:id="@+id/editTextNhapTieuDe"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Nhập tiêu đề"
+                android:textStyle="italic"
+                android:layout_weight="2"
+                />
+
+            <TextView
+                android:id="@+id/textViewNoiDung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nội dung"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_weight="0.25"
+                />
+
+            <EditText
+                android:id="@+id/editTextNhapNoiDung"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:hint="Nhập nội dung"
+                android:textStyle="italic"
+                android:layout_weight="4"
+                />
+            <TextView
+                android:id="@+id/textViewStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:text="Ngày bắt đầu"
+                android:textStyle="bold"
+                android:layout_weight="0.25"
+                />
+
+
+                <EditText
+                    android:id="@+id/editTextStartDate"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:ems="10"
+                    android:hint="dd/mm/yyyy"
+                    android:inputType="date" />
+
+            <TextView
+                android:id="@+id/textViewEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_weight="0.5"
+                android:text="Ngày kết thúc"
+                android:textStyle="bold" />
+
+            <EditText
+                    android:id="@+id/editTextEndDate"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:ems="10"
+                    android:hint="dd/mm/yyyy"
+                    android:inputType="date" />
+
+
+                        <RadioGroup
+                            android:id="@+id/groupStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:layout_editor_absoluteX="343dp">
+
+                            <RadioButton
+                                android:id="@+id/buttonChuaLam"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:shadowColor="#C7EDEC"
+                                android:text="Chưa_làm" />
+
+                            <RadioButton
+                                android:id="@+id/buttonDangLam"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:shadowColor="#C7EDEC"
+                                android:text="Đang_làm" />
+
+                            <RadioButton
+                                android:id="@+id/radioButtonHoanThanh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:shadowColor="#C7EDEC"
+                                android:text="Hoàn_thành" />
+
+                            <RadioButton
+                                android:id="@+id/radioButtonQuaHan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:shadowColor="#C7EDEC"
+                                android:text="Quá_hạn" />
+                        </RadioGroup>
+            <TextView
+                android:id="@+id/textViewUpdateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Thời gian cập nhật"
+                android:layout_weight="0.25"
+                />
+
+            <TextView
+                android:id="@+id/editTextTimeUpdate"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:ems="10"
+                android:layout_weight="0.25"
+                android:hint="00/00/0000"
+                />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
